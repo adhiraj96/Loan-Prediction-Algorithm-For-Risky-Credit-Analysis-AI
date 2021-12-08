@@ -115,7 +115,8 @@ We use [GitHub](http://github.com/) for versioning. Along with [GitKraken](https
 ## Authors
 
 * **Anisha Gharat**
-* **Gopesh Rajderkar**
-* **Samson Anto Paul**
+* **Sarwat Til Vusqa**
+* **Simran Paul**
+* **Adhiraj Singh**
 
 
