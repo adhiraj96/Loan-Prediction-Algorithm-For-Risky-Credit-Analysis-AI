@@ -1,0 +1,78 @@
+{%extends "layout.html" %}
+{%block link%}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='analyze.css') }}">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+{%endblock%}
+
+{%block nav_config%}
+    <nav class="navbar navbar-default">
+{%endblock%}
+{%block nav%}
+  <li><a href="/logout"><span class="glyphicon glyphicon-log-out "></span>LOGOUT</a>
+
+{%endblock nav%}
+{%block content %}
+<div class="row">
+        <div class="col-md-8">
+            <div class="chart">
+                    <canvas id="myChart" style="width=50%"></canvas>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="table">
+                <table class="table table-hover">
+                    {%if data %}
+                        {%for key,val in table_data%}
+                            <tr>
+                                <td>{{ key }}</td>
+                                <td>{{ val }}%</td>
+                            </tr>
+                        {% endfor %}
+                    {%endif%}
+                </table>
+            </div>
+        </div>
+</div>
+
+{%endblock content %}
+
+{%block script%}
+<script>
+var data = {{data}};
+var labels = {{labels|safe}};
+var ctx = document.getElementById('myChart').getContext('2d');
+var options = {
+    cutoutPercentage : 60,
+    responsive : true,
+    legend : {
+        position: 'right'
+    },
+    animation : {
+        animateScale : true,
+        duration: 1500
+    }
+};
+var color = ['#4D4D4D','#5DA5DA','#FAA43A','#60BD68','#F17CB0','#B2912F','#B276B2','#DECF3F']
+data = {
+        labels: labels,
+        datasets: [{
+            label: 'Attribute Importance',
+            backgroundColor: color,
+            borderColor: 'rgb(255, 255, 255)',
+            data: data
+            
+        }]
+    }
+
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'pie',
+
+    // The data for our dataset
+    data: data,
+
+    // Configuration options go here
+    options: options
+});
+</script>
+{%endblock script%}

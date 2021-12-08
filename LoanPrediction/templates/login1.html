@@ -1,0 +1,47 @@
+{%extends "layout.html" %}
+{%block link%}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login1.css') }}">
+{%endblock%}
+{%block nav_config%}
+    <nav class="navbar navbar-default">
+{%endblock%}
+{%block nav%}
+<form class="navbar-form navbar-left" method="POST" action="/login">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Email" required>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Password" required>
+    </div>
+    <button type="submit" class="btn btn-default">Login</button>
+    <a class="btn btn-link" id="fglink" href="#" role="button">forgot password?</a>
+  </form>
+{%endblock nav%}
+
+{%block content%}
+<div class="signup_container">
+    <form action="/signup"  method = "post">
+        <div class="form-group">
+                <label for="uname">Username</label>
+                <input type="text" class="form-control" name="uname" id="uname" required>
+        </div>
+        <div class="form-group">
+                <label for="bname">Bank Name</label>
+                <input type="text" class="form-control" name="bname" id="bname" required>
+        </div>
+        <div class="form-group">
+            <label for="emailLable">Email address</label>
+            <input type="email" class="form-control" id="emailLable" name="email" required>
+        </div>
+        <div class="form-group">
+                <label for="pass">Password</label>
+                <input type="password" class="form-control" id="pass" name="password" minlength='5' required>
+        </div>
+        
+		<input id="submit_sp" type="submit" name="Submit" value="Sign-Up" >
+    <div class="g-recaptcha" data-sitekey="6LefQDYUAAAAALx7TGZcwmSqMeXkslfxf4YK2dbe"></div>  
+	</form>
+</div>
+
+
+{%endblock%}

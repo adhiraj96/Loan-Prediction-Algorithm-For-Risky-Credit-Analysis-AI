@@ -1,0 +1,12 @@
+form input[type=text]{
+    width: 50%;
+    margin: 2% 25%;
+}
+form button{
+    width: 20%;
+    margin: 2% 40%;
+}
+.table{
+    margin: 5% 5%;
+    width: 90%
+}

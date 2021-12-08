@@ -1,0 +1,186 @@
+{%extends "layout.html" %}
+
+{%block nav_config%}
+    <nav class="navbar navbar-default navbar-fixed-top">
+{%endblock%}
+{%block nav%}
+  <li><a class="fa fa-users"  href="#about">ABOUT</a></li>
+  <li><a class="fas fa-tasks" href="#services">SERVICES</a></li>
+  <li><a class="fas fa-phone-square" href="#contact">CONTACT</a></li>
+  <li><a class="fas fa-comment-alt" href="#feedback">FEEDBACK</a></li>
+  <li><a href="/logout"><span class="glyphicon glyphicon-log-out "></span>LOGOUT</a>
+
+{%endblock nav%}
+
+{%block content%}
+<div class="jumbotron text-center">
+  <h1>LOAN-PREDICTOR</h1> 
+  <p>we specialize in risky credit analysis</p>   
+</div>
+
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>About Loan-Predictor</h2><br>
+      <h4>A tool that helps predict risky creditors. This system enhances the ability of the bank to take critical decisions regarding loan sanctions for customers.</h4><br>
+      <p>Gaining as many good credit scores are beneficial for customers in numerous ways and it also allows banks to analyse their clients and to give credit loans to them accordingly. We look whether machine learning techniques are useful to predict and classify the customer’s credit score (good/bad) to overcome the future risks giving loans to clients who cannot repay. </p>
+      <br><button onClick="location.href='#contact'" class="btn btn-default btn-lg">Get in Touch</button>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-signal logo"></span>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>Our Values</h2><br>
+      <h4><strong>OBJECTIVES:</strong> 
+        <br><p>The loan can be pre-approved depending on the customer’s’ profile, the loan can be disbursed in 10 seconds. In other cases, it can be done in 48 hours after taking the right approvals. 
+
+        <p>Five years ago the same process would take 10-15 days.</p>
+      
+        <p>There are a large number of use cases in lending ranging from cracking down on fraud to managing risk better. These were mostly done manually with some help from computers before. Now, it has a layer of artificial intelligence. In lending, AI is being used for pulling out information from big data, making sense of it and try to improve our own credit score of customers.</p>
+      
+        <p>Help customers make good financial decisions (for example, through the use of targeted alerts)</p>
+        </p><br>
+      </h4><br>
+      
+    </div>
+  </div>
+</div>
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid">
+  <div class="text-center">
+    <h2>Risky Credit Analysis</h2>
+    <h4>Choose a service which you want to use</h4>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Existing Customer</h1>
+        </div>
+        <div class="panel-body">
+          <br>
+          <p><strong>This service provides you with a banking history of an  existing customer of the bank</strong> </p>
+        <p><strong>Search customers easily with their unique customer ids </strong> </p>
+        <p><strong>View the historic trend of the customer in order to better analyze his credit ability</strong></p>
+        </br>
+
+        </div>
+        <div class="panel-footer">
+          <h3>View History</h3>
+          
+          <button class="btn btn-lg" onClick="location.href='/view'">View</button>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Attribute Analysis</h1>
+        </div>
+        <div class="panel-body">
+          <br>
+          <p><strong>This service provides you with graphical analysis of the trends of each attribute under consideration</strong> </p>
+          <p><strong>Analyse the variable importance in predicting the scores</strong> </p>
+          <p><strong>It will help you understand the attributes which contribute the majority of the share in providing the unique score</strong></p>
+          </br>
+          </div>
+        <div class="panel-footer">
+          <h3>Analyze Trends</h3>
+         
+          <button class="btn btn-lg" onClick="location.href='/analyze'">Analyze</button>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>New Customer</h1>
+        </div>
+        <div class="panel-body">
+          <br>
+          <p><strong>This service provides you with a score for a new customer appyling for a loan after entering his details</strong></p>
+          <p><strong>Graphical representation of the attributes that lead to the predicted score</strong></p>
+          <p><strong>Approval or Denial response for the loan to you</strong></p>
+          </br>
+        </div>
+        <div class="panel-footer">
+          <h3>Generate Score</h3>
+          
+          <button class="btn btn-lg" onClick="location.href='/generate'">Generate</button>
+        </div>
+      </div>      
+    </div>    
+  </div>
+</div>
+
+
+
+
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p><span class="glyphicon glyphicon-map-marker"></span> Windsor, Canada</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +226 777 8888</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> projecttest@gmail.com</p>
+    </div>
+  </div>
+</div>
+
+
+
+<!--Feedback Section-->  
+<div id="feedback">
+  <h2 class="text-center">What our customers say</h2>
+</div>  
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+  
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"This company is the best.I am so happy with the result!"<br><span>Michael Roe, Vice President, RBS</span></h4>
+      </div>
+      <div class="item">
+        <h4>"One word...WOW!!"<br><span>John Cleverly, Analyst, Analyzers.Inc</span></h4>
+      </div>
+      <div class="item">
+        <h4>"This system is an absolute delight"<br><span>Chandler Bing, Banker, HDFC</span></h4>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+{%endblock content%}
+
+{%block script%}
+  <script src="{{ url_for('static',filename='main.js') }}"></script>  
+{%endblock script%}

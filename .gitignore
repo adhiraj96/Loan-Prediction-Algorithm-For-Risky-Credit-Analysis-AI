@@ -1,0 +1,17 @@
+.DS_Store
+
+*.csv
+
+*.sav
+
+*.ipynb
+
+*.db
+
+LoanPrediction/__pycache__/
+
+*.db
+
+*.pyc
+
+!credit_train_edited_version.csv

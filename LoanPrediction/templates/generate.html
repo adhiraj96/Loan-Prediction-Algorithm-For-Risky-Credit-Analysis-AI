@@ -1,0 +1,71 @@
+{%extends "layout.html" %}
+{%block link%}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='generate.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{%endblock%}
+{%block nav_config%}
+    <nav class="navbar navbar-default">
+{%endblock%}
+{%block nav%}
+  <li><a href="/logout"><span class="glyphicon glyphicon-log-out "></span>LOGOUT</a>
+{%endblock nav%}
+
+{%block content %}
+ 
+<div class = "container generate">
+  <div class="row" >
+    <div class="col-75">
+      <div class="container">
+        <form action="/generate" method="POST">
+          <h3>Fill Details</h3>
+          <br>
+          <div class="row">
+            <div class="col-25">
+                <label for="lamt"><i class="fas fa-wallet"></i> Current Loan Amount</label>
+                <input type="number" id="lamt" name="amount" placeholder="eg: 10,0000" min="5000" required>
+                <br></br>
+                <label for="cscore"><i class="fa fa-institution"></i> Credit Score</label>
+                <input type="number" id="cscore" name="cscore" placeholder="eg: 760" min="300" max="850" required>
+                <br></br>
+                <label for="annualincome">Annual Income</label>
+                <input type="number" id="annualincome" name="annualincome" placeholder="eg: 5000000" min="0" required>
+                <br></br>
+                <label for="monthlydebt">Monthly Debt</label>
+                <input type="number" id="monthlydebt" name="monthlydebt" placeholder="eg: 3530" min="0" required>
+            </div>
+  
+           
+            <div class="col-25">
+              
+              <label for="yoch">Years of Credit History</label>
+              <input type="number" id="yoch" name="yearsofhistory" placeholder="eg: 10" min="0" required >
+              <br></br>
+              <label for="noa">Number of Open Accounts</label>
+              <input type="number" id="noa" name="openacc" placeholder="eg: 8" min="0" required>
+              <br></br>
+              <label for="ccb">Current Credit Balance</label>
+              <input type="number" id="ccb" name="creditbalance" placeholder="eg: 16,789" min="0" required>
+              <br></br>
+              <div class="row">
+                <div class="col-50">
+                  <label for="moc">Maximum Open Credit</label>
+                  <input type="number" id="moc" name="maxopencredit" placeholder="eg: 4" min="0" required>
+                </div>
+              </div>
+            </div>
+            
+
+            
+          </div>
+          
+          <input type="submit" value="Examine" class="btn btn-primary">
+        </form>
+      </div>
+    </div>
+    
+  </div>
+
+</div>
+
+
+{%endblock content %}

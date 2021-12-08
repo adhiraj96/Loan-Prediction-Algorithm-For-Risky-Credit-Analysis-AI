@@ -1,0 +1,56 @@
+{%extends "layout.html" %}
+{%block nav_config%}
+    <nav class="navbar navbar-default">
+{%endblock%}
+{%block nav%}
+  <li><a href="/login"><span class="glyphicon glyphicon-log-out "></span>LOGOUT</a>
+
+{%endblock nav%}
+{%block link%}
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+{%endblock link%}
+{%block content %}
+<br>
+<div class="container">
+	<canvas id="myChart"></canvas>
+ </div>
+{%endblock content %}
+
+{%block script%}
+<script>
+var data = {{data}};
+var labels = {{labels|safe}};
+var ctx = document.getElementById('myChart').getContext('2d');
+var options = {
+    cutoutPercentage : 60,
+    responsive : true,
+    rotation : 3.14,
+    circumference :3.14,
+    animation : {
+        animateScale : true,
+        duration: 2000
+    }
+};
+data = {
+        labels: labels,
+        datasets: [{
+            label: 'My First dataset',
+            backgroundColor: ['#DECF3F','#FFFFFF'],
+            borderColor: 'rgb(255, 255, 255)',
+            data: data
+            
+        }]
+    };
+
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'pie',
+
+    // The data for our dataset
+    data: data,
+
+    // Configuration options go here
+    options: options
+});
+</script>
+{%endblock script%}

@@ -1,0 +1,50 @@
+
+
+
+#fglink:hover{
+    color: aliceblue
+}
+
+.signup_container{
+    margin: 50px auto;
+    width: 400px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    box-sizing: border-box;
+    padding: 10px 0;
+    color:rgb(43, 43, 43);
+    border:1px solid #cecece;
+  }
+  .signup_container h2{
+    margin: 0 auto;
+    text-align: center;
+    color: darkgrey;
+  }
+  
+  .signup_container form{
+    margin: 30px auto;
+  }
+  
+  .signup_container form .form-group{
+    margin: 10px 5%;
+    width: 90%;
+    line-height: 20px;
+    border-style: 'line';
+    padding: 0 10px;
+    box-sizing: border-box;
+    color: black;
+    background-color:rgb(255, 254, 254);
+  }
+  .signup_container form input[type=submit]{
+    background-color: steelblue;
+    color: white;
+    width: 90%;
+    margin: 20px 5%;
+    line-height: 30px;
+  }
+  .signup_container h4{
+    
+    margin: 20px 0;
+    text-align: center;
+    box-sizing: content-box;
+  }
+  

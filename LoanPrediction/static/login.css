@@ -1,0 +1,132 @@
+body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  }
+  * {box-sizing: border-box}
+
+  .navbar {
+margin-bottom: 0;
+background-color: #050607;
+z-index: 9999;
+border: 0;
+font-size: 12px !important;
+line-height: 1.42857143 !important;
+letter-spacing: 4px;
+border-radius: 0;
+font-family: Montserrat, sans-serif;
+            }
+.navbar li a, .navbar .navbar-brand {
+color: #fff !important;
+                        }
+.navbar-nav li a:hover, .navbar-nav li.active a {
+color: #f4511e !important;
+background-color: #fff !important;
+                      }
+.navbar-default .navbar-toggle {
+border-color: transparent;
+color: #fff !important;
+                        }
+
+/* Style the input container */
+.navbar .login-container {
+float: right;
+}
+
+/* Style the input field inside the navbar */
+.navbar input[type=text] input[type=password]{
+padding: 6px;
+margin-top: 8px;
+font-size: 17px;
+border: none;
+width: 150px; /* adjust as needed (as long as it doesn't break the topnav) */
+}
+
+/* Style the button inside the input container for login */
+.navbar .login-container #btn {
+float: right;
+padding: 6px;
+margin-top: 8px;
+margin-right: 16px;
+background: rgb(116, 114, 114);
+font-size: 17px;
+border: none;
+cursor: pointer;
+width: 15%;
+}
+
+.navbar .login-container #btn:hover {
+background:#f4511e;
+}	
+
+
+
+/* Sign Up Form*/
+
+/* Full-width input fields */
+input[type=text], input[type=password],input[type=email] {
+width: 100%;
+padding: 10px;
+margin: 5px 0 22px 0;
+display: inline-block;
+border: none;
+background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password],input[type=email]:focus {
+background-color: #ddd;
+outline: none;
+}
+
+hr {
+border: 1px solid #f1f1f1;
+margin-bottom: 0;
+}
+
+/* Set a style for all buttons */
+button {
+background-color: #4CAF50;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 100%;
+opacity: 0.9;
+}
+
+button:hover {
+opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+padding: 14px 20px;
+background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+float: left;
+width: 50%;
+}
+
+/* Add padding to container elements 
+.container {
+padding: 16px;
+}
+*/
+
+/* Clear floats */
+.clearfix::after {
+content: "";
+clear: both;
+display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+.cancelbtn, .signupbtn {
+width: 100%;
+}
+}
